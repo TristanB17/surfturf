@@ -15,6 +15,7 @@ class SearchesController < ApplicationController
     search = Search.find_by(id: params[:id])
     clean_search = CleanSearch.new(search)
     if clean_search.location_results.empty?
+      search.delete
       redirect_to new_search_path
       flash[:notice] = "Sorry, no locations found with those parameters"
     else

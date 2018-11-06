@@ -17,6 +17,8 @@ RSpec.describe 'a user' do
       expect(page).to have_button('Search Location')
     end
     it 'enters a search and is given options to specify location' do
+      location_1 = '1600, Pennsylvania Avenue, Avon Park, Savannah, Chatham County, Georgia, 31404, USA'
+      location_2 = '1600, Pennsylvania Avenue, Saint Cloud, Osceola County, Florida, 34769, USA'
       visit searches_path
 
       fill_in :address, with: '1600 Pennsylvania Ave'
@@ -24,10 +26,10 @@ RSpec.describe 'a user' do
 
       expect(current_path).to eq(search_path(Search.last.id))
       expect(page).to have_content('Did you mean...?')
-      expect(page).to have_link('1600, Pennsylvania Avenue, Avon Park, Savannah, Chatham County, Georgia, 31404, USA')
-      expect(page).to have_link('1600, Pennsylvania Avenue, Saint Cloud, Osceola County, Florida, 34769, USA')
+      expect(page).to have_link(location_1)
+      expect(page).to have_link(location_2)
     end
-    it 'asks user to enter new location if query is invalid/returns no resutls' do
+    it 'asks user to enter new location if query is invalid/returns no results' do
       visit searches_path
 
       fill_in :address, with: 'lsjdnvlkajsndlviuasbdklhvasbdglihb'
