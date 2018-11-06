@@ -66,6 +66,14 @@ RSpec.configure do |config|
 
   config.include FactoryBot::Syntax::Methods
 
+  def stub_omniauth
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
+      
+      })
+
+  end
+
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
