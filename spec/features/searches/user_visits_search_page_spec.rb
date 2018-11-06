@@ -12,21 +12,29 @@ RSpec.describe 'a user' do
       expect(page).to have_field(:address)
       expect(page).to have_field(:city)
       expect(page).to have_field(:state)
-      expect(page).to have_field(:zip_code)
+      expect(page).to have_field(:zip)
       expect(page).to have_field(:country)
       expect(page).to have_button('Search Location')
     end
     it 'enters a search and is given options to specify location' do
       visit searches_path
 
-      # fill_in :address, with: '1600 Pennsylvania Ave'
       fill_in :address, with: '1600 Pennsylvania Ave'
       click_on 'Search Location'
 
-      expect(current_path).to eq(searches_path)
+      expect(current_path).to eq(search_path(Search.last.id))
       expect(page).to have_content('Did you mean...?')
-      expect(page).to have_link('Savannah, Georgia, USA')
-      expect(page).to have_link('Saint Cloud, Florida, USA')
+      expect(page).to have_link('1600, Pennsylvania Avenue, Avon Park, Savannah, Chatham County, Georgia, 31404, USA')
+      expect(page).to have_link('1600, Pennsylvania Avenue, Saint Cloud, Osceola County, Florida, 34769, USA')
+    end
+    it 'asks user to enter new location if query is invalid/returns no resutls' do
+      visit searches_path
+
+      fill_in :address, with: 'lsjdnvlkajsndlviuasbdklhvasbdglihb'
+      click_on 'Search Location'
+
+      expect(current_path).to eq(new_search_path)
+      expect(page).to have_content("Sorry, no locations found with those parameters")
     end
   end
 end

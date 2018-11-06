@@ -14,7 +14,12 @@ class SearchesController < ApplicationController
   def show
     search = Search.find_by(id: params[:id])
     clean_search = CleanSearch.new(search)
-    @potential_locations = clean_search.location_results
+    if clean_search.location_results.empty?
+      redirect_to new_search_path
+      flash[:notice] = "Sorry, no locations found with those parameters"
+    else
+      @potential_locations = clean_search.location_results
+    end
   end
 
   private
