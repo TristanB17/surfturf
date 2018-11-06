@@ -69,9 +69,19 @@ RSpec.configure do |config|
   def stub_omniauth
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
-      
-      })
-
+      provider: "google",
+      uid: "12345678910",
+      info: {
+        email: "vinnie@spaghett.com",
+        first_name: "Vinnie",
+        last_name: "Tortellini"
+      },
+      credentials: {
+        token: "12345",
+        refresh_token: "123456",
+        expires_at: DateTime.now,
+      }
+    })
   end
 
   # RSpec Rails can automatically mix in different behaviours to your tests
