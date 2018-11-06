@@ -1,0 +1,4 @@
+<h2>Did you mean...?</h2><br><br>
+<% @potential_locations.each do |result| %>
+  <%= link_to "#{result.display_name}", locations_path, method: :post %>
+<% end %>

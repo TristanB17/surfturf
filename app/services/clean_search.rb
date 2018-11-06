@@ -10,7 +10,7 @@ class CleanSearch
     @address = params[:address]
     @city = params[:city]
     @state = params[:state]
-    @zip = params[:zip_code]
+    @zip = params[:zip]
     @country = params[:country]
     @to_search = [@address, @city, @state, @zip, @country]
   end

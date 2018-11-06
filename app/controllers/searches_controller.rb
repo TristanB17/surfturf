@@ -8,9 +8,13 @@ class SearchesController < ApplicationController
 
   def create
     search = Search.create(search_params)
-    clean_search = CleanSearch.new(search_params)
-    @potential_locations = clean_search.location_results
     redirect_to search_path(search.id)
+  end
+
+  def show
+    search = Search.find_by(id: params[:id])
+    clean_search = CleanSearch.new(search)
+    @potential_locations = clean_search.location_results
   end
 
   private
