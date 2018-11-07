@@ -7,6 +7,34 @@ SurfTurf is a small app used to gather marine weather data on a desired location
 
 This project was built as a solo 'choose your own adventure'-type project where an API is provided, with an app then structured around it.
 
+## Site UI
+
+The Homepage:
+![homepage1](https://i.imgur.com/QF2tugw.png)
+
+
+Upon clicking 'Sign in with Google', a user is prompted to select a google account, after which they are taken to a logged in user homepage.
+
+
+![googlelogin](https://i.imgur.com/pCckExN.png)
+
+Selecting 'new search' will present a user with a series of fields; they can fill out as many or as little as they wish, and results with provided information will still be returned.
+
+
+![!newsearch](https://i.imgur.com/GTqFb0g.png)
+
+After clicking 'search', a user will then be presented with a series of locations (or one depending on the specificity of the user's search parameters) which all share attributes of the original search. A user is able to select the intended location.
+
+
+![verifylocation](https://i.imgur.com/31Moi5l.png)
+
+The user is then presented with weather information on the current date.
+
+
+![weatherresults](https://i.imgur.com/RGhkNrl.png)
+
+Additional data analysis will be conducted as a part of the expansion of the app.
+
 
 ## Getting Started
 
@@ -79,34 +107,6 @@ The test suite is built using RSpec.  After setting up the respository locally, 
 ```
 bundle exec rspec
 ```
-
-## Site UI
-
-The Homepage:
-![homepage1](https://i.imgur.com/QF2tugw.png)
-
-
-Upon clicking 'Sign in with Google', a user is prompted to select a google account, after which they are taken to a logged in user homepage.
-
-
-![googlelogin](https://i.imgur.com/pCckExN.png)
-
-Selecting 'new search' will present a user with a series of fields; they can fill out as many or as little as they wish, and results with provided information will still be returned.
-
-
-![!newsearch](https://i.imgur.com/GTqFb0g.png)
-
-After clicking 'search', a user will then be presented with a series of locations (or one depending on the specificity of the user's search parameters) which all share attributes of the original search. A user is able to select the intended location.
-
-
-![verifylocation](https://i.imgur.com/31Moi5l.png)
-
-The user is then presented with weather information on the current date.
-
-
-![weatherresults](https://i.imgur.com/RGhkNrl.png)
-
-Additional data analysis will be conducted as a part of the expansion of the app.
     
 ## Deployment
 
