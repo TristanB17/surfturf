@@ -38,6 +38,7 @@ gem 'figaro'
 gem 'faraday'
 gem 'geocoder'
 gem "bulma-rails", "~> 0.7.2"
+gem 'coveralls', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
