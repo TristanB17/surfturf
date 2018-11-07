@@ -37,12 +37,14 @@ gem "omniauth-google-oauth2"
 gem 'figaro'
 gem 'faraday'
 gem 'geocoder'
+gem "bulma-rails", "~> 0.7.2"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'capybara', '~> 2.13'
   gem 'database_cleaner'
   gem 'factory_bot_rails'
+  gem 'launchy'
   gem 'pry'
   gem 'rspec-rails'
   gem 'selenium-webdriver'

@@ -3,7 +3,6 @@ class SearchesController < ApplicationController
   end
 
   def new
-    render new_search_path
   end
 
   def create

@@ -10,7 +10,7 @@ RSpec.feature "user logs in" do
       expect(page).to have_link("Sign in with Google")
       click_link "Sign in with Google"
 
-      expect(page).to have_content("Vinnie Tortellini")
+      expect(page).to have_content("Vinnie")
       expect(page).to have_link("Logout")
     end
     it 'is able to logout from being logged in' do

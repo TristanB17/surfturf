@@ -10,16 +10,12 @@
   </head>
 
   <body>
+    <%= render partial: '/layouts/navbar' %>
     <% if flash[:notice] %>
       <%= render partial: '/layouts/flash' %>
     <% end %>
-    <% if current_user  %>
-      <h3>Welcome, <%= "#{current_user.first_name} #{current_user.last_name}" %></h3>
-      <%= link_to "Logout", logout_path %>
-      <%= link_to "New Search", new_search_path %>
-    <% else %>
-      <%= link_to "Sign in with Google", "/auth/google" %>
-    <% end %>
-    <%= yield %>
+    <section class='hero is-fullheight bg-img'>
+      <%= yield %>
+    </section>
   </body>
 </html>
