@@ -1,0 +1,41 @@
+  <% if current_user  %>
+  <nav class='navbar has-text-white'>
+    <div class='container'>
+      <div class="navbar-brand">
+        <div class="navbar-item has-text-white">
+          <h1 class='title is-size-1 white-title-shadow'>Surfturf, duuuuude</h1>
+        </div>
+        <div class="navbar-menu has-more-padding">
+          <div class="navbar-end">
+            <div class="navbar-item has-text-white">
+              <h3>Welcome, <%= "#{current_user.first_name}" %></h3>
+            </div>
+            <div class="navbar-item">
+              <%= link_to "New Search", new_search_path, :class => 'white-title' %>
+            </div>
+            <div class="navbar-item">
+              <%= link_to "Logout", logout_path, :class => 'white-title' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <% else %>
+  <nav class='navbar has-text-white'>
+    <div class='container'>
+      <div class="navbar-brand">
+          <div class="navbar-item has-text-white">
+            <h1 class='title is-size-1 white-title-shadow'>Surfturf, duuuuude</h1>
+          </div>
+        <div class="navbar-menu sign-in-padding">
+          <div class="navbar-end">
+            <div class="navbar-item has-text-white">
+              <%= link_to "Sign in with Google", "/auth/google", :class => 'white-title' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <% end %>

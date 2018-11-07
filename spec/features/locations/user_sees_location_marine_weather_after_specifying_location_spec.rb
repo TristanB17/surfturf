@@ -7,10 +7,10 @@ RSpec.describe 'a user' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end
     it 'sees marine weather for selected location' do
-      VCR.use_cassette('geocoder_huntington_beach_and_marine_weather_api', :record => :new_episodes) do 
+      VCR.use_cassette('geocoder_huntington_beach_and_marine_weather_api', :record => :new_episodes) do
         desired_location = 'Huntington Beach'
 
-        visit searches_path
+        visit new_search_path
 
         fill_in :address, with: desired_location
         click_on 'Search Location'

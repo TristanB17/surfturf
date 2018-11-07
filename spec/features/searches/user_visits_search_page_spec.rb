@@ -7,7 +7,7 @@ RSpec.describe 'a user' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end
     it 'sees search fields' do
-      visit searches_path
+      visit new_search_path
 
       expect(page).to have_field(:address)
       expect(page).to have_field(:city)
@@ -20,7 +20,7 @@ RSpec.describe 'a user' do
       VCR.use_cassette('geocoder_pennsylvania_ave') do
         location_1 = '1600, Pennsylvania Avenue, Avon Park, Savannah, Chatham County, Georgia, 31404, USA'
         location_2 = '1600, Pennsylvania Avenue, Saint Cloud, Osceola County, Florida, 34769, USA'
-        visit searches_path
+        visit new_search_path
 
         fill_in :address, with: '1600 Pennsylvania Ave'
         click_on 'Search Location'
@@ -34,7 +34,7 @@ RSpec.describe 'a user' do
     it 'asks user to enter new location if query is invalid/returns no results' do
       VCR.use_cassette('lsjdnvlkajsndlviuasbdklhvasbdglihb') do
         service = Geocoder.search('lsjdnvlkajsndlviuasbdklhvasbdglihb')
-        visit searches_path
+        visit new_search_path
 
         fill_in :address, with: 'lsjdnvlkajsndlviuasbdklhvasbdglihb'
         click_on 'Search Location'

@@ -1,4 +1,11 @@
-<h2>Did you mean...?</h2><br><br>
-<% @potential_locations.each do |result| %>
-  <%= link_to "#{result.display_name}", destinations_path({ display: result.display_name, lat: result.latitude, lon: result.longitude }), method: :get %>
-<% end %>
+<div class="hero-body">
+  <div class="container has-text-centered">
+    <div class="column is-6 is-offset-3">
+      <h3 class='title white-title-shadow has-text-weight-bold'> Whoa, like, did you mean...?</h3>
+      <% @potential_locations.each do |result| %>
+        <%= link_to "#{result.display_name}", destinations_path({ display: result.display_name, lat: result.latitude, lon: result.longitude }), method: :get %><br><br>
+      <% end %>
+
+    </div>
+  </div>
+</div>
