@@ -121,6 +121,7 @@ SurfTurf is deployed through [Heroku](https://www.heroku.com/) and hosted at [ht
 
 **Tristan Bambauer**  
  	*[GitHub](https://github.com/TristanB17)*
+    
  	*[LinkedIn](https://www.linkedin.com/in/tristan-bambauer/)*
 
 ## Contributing
