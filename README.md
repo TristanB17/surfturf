@@ -112,6 +112,10 @@ bundle exec rspec
 
 SurfTurf is deployed through [Heroku](https://www.heroku.com/) and hosted at [https://surfturf.herokuapp.com/](https://surfturf.herokuapp.com/).
 
+## Planning
+
+The planning of this project was done through [waffle.io](https://waffle.io/), and the board for this project can be viewed [here](https://waffle.io/TristanB17/surfturf)
+
 ## Built With
 
 * [Rails 5.2.1](https://rubyonrails.org/) - Ruby based web framework
