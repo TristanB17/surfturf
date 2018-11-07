@@ -91,15 +91,15 @@ Upon clicking 'Sign in with Google', a user is prompted to select a google accou
 
 Selecting 'new search' will present a user with a series of fields; they can fill out as many or as little as they wish, and results with provided information will still be returned.
 
-[newsearch](https://i.imgur.com/GTqFb0g.png)
+[!newsearch](https://i.imgur.com/GTqFb0g.png)
 
 After clicking 'search', a user will then be presented with a series of locations (or one depending on the specificity of the user's search parameters) which all share attributes of the original search. A user is able to select the intended location.
 
-[verifylocation](https://i.imgur.com/31Moi5l.png)
+[!verifylocation](https://i.imgur.com/31Moi5l.png)
 
 The user is then presented with weather information on the current date.
 
-[weatherresults](https://i.imgur.com/RGhkNrl.png)
+[!weatherresults](https://i.imgur.com/RGhkNrl.png)
 
 Additional data analysis will be conducted as a part of the expansion of the app.
     
