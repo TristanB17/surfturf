@@ -26,7 +26,7 @@ RSpec.describe 'a user' do
         click_on 'Search Location'
 
         expect(current_path).to eq(search_path(Search.last.id))
-        expect(page).to have_content('Did you mean...?')
+        expect(page).to have_content('Whoa, like, did you mean...?')
         expect(page).to have_link(location_1)
         expect(page).to have_link(location_2)
       end
