@@ -19,12 +19,24 @@
   background-color: #2a52be;
 }
 
+.search-card {
+  background-color: #2a52be;
+}
+
+.search-overflow {
+  overflow-y: scroll;
+}
+
 .navbar > h1 {
   color: white;
 }
 
 link {
   color: white;
+}
+
+.table-height {
+  max-height: 500px;
 }
 
 .has-more-padding {
@@ -41,6 +53,10 @@ link {
 }
 .white-title {
   color: white;
+}
+
+.columns.is-centered {
+    justify-content: center;
 }
 
 .bg-img {
