@@ -16,8 +16,9 @@ RSpec.describe 'a user' do
 
       click_link(desired_location, match: :first)
 
-      expect(current_path).to eq(locations_path)
+      expect(current_path).to eq(destinations_path)
       expect(page).to have_content("Local Marine Weather Conditions for: #{desired_location}")
+      expect(page).to have_content("")
     end
   end
 end
