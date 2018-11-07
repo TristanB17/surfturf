@@ -1,6 +1,10 @@
 class DestinationsController < ApplicationController
   def index
     dest = DestinationPresenter.new(params[:lat], params[:lon])
-    @local_weather = dest.destination_weather(params[:display])
+    if dest.destination_weather(params[:display])
+      @local_weather = dest.destination_weather(params[:display])
+    else
+      return nil
+    end
   end
 end

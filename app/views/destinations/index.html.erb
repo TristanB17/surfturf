@@ -1,45 +1,59 @@
-<div class="hero-body">
-  <div class="container has-text-centered">
-    <div class="column is-10 is-offset-1">
-      <h3 class='title white-title-shadow has-text-weight-bold'> Local Marine Weather Conditions for:</h3>
-      <h5 class='subtitle white-title-shadow has-text-weight-bold'> <%= @local_weather.name %></h5>
-      <div class="card search-card">
-        <div class="card-content has-text-centered">
-          <h5 class='title white-title-shadow has-text-weight-bold'> Date: <%= @local_weather.date %></h5>
+<% if @local_weather %>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="column is-10 is-offset-1">
+        <h3 class='title white-title-shadow has-text-weight-bold'> Local Marine Weather Conditions for:</h3>
+        <h5 class='subtitle white-title-shadow has-text-weight-bold'> <%= @local_weather.name %></h5>
+        <div class="card search-card">
+          <div class="card-content has-text-centered">
+            <h5 class='title white-title-shadow has-text-weight-bold'> Date: <%= @local_weather.date %></h5>
+          </div>
         </div>
-      </div>
-      <div class="card search-card">
-        <div class="card-content has-text-centered">
-          <h5 class='title white-title-shadow has-text-weight-bold'> High: <%= "#{@local_weather.maxtempf}°F/#{@local_weather.maxtempc}°C" %> </h5>
+        <div class="card search-card">
+          <div class="card-content has-text-centered">
+            <h5 class='title white-title-shadow has-text-weight-bold'> High: <%= "#{@local_weather.maxtempf}°F/#{@local_weather.maxtempc}°C" %> </h5>
+          </div>
         </div>
-      </div>
-      <div class="card search-card">
-        <div class="card-content has-text-centered">
-          <h5 class='title white-title-shadow has-text-weight-bold'> Low: <%= "#{@local_weather.mintempf}°F/#{@local_weather.mintempc}°C" %> </h5>
-        </div>
-      </div><br><br>
-      <table class="table is-bordered is-striped is-fullwidth table-height">
-        <thead>
-          <tr>
-            <th> <p class='has-text-centered'>Time</p></th>
-            <th> <p class='has-text-centered'>Air Temperature<br>(°F/°C)</p></th>
-            <th> <p class='has-text-centered'>Wind Speed<br>(mph/kmph)</p></th>
-            <th> <p class='has-text-centered'>Average Wave Height<br>(ft/m)</p></th>
-            <th> <p class='has-text-centered'>Water Temperature<br>(°F/°C)</p></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @local_weather.hourly_breakdown.each do |hour| %>
+        <div class="card search-card">
+          <div class="card-content has-text-centered">
+            <h5 class='title white-title-shadow has-text-weight-bold'> Low: <%= "#{@local_weather.mintempf}°F/#{@local_weather.mintempc}°C" %> </h5>
+          </div>
+        </div><br><br>
+        <table class="table is-bordered is-striped is-fullwidth table-height">
+          <thead>
             <tr>
-              <td> <%= hour.time %> </td>
-              <td> <%= "#{hour.tempf}/#{hour.tempc}" %> </td>
-              <td> <%= "#{hour.wind_speed_miles}/#{hour.wind_speed_kmph}" %> </td>
-              <td> <%= "#{hour.wave_height_feet}/#{hour.wave_height_meters}" %> </td>
-              <td> <%= "#{hour.water_temp_f}/#{hour.water_temp_c}" %> </td>
+              <th> <p class='has-text-centered'>Time</p></th>
+              <th> <p class='has-text-centered'>Air Temperature<br>(°F/°C)</p></th>
+              <th> <p class='has-text-centered'>Wind Speed<br>(mph/kmph)</p></th>
+              <th> <p class='has-text-centered'>Average Wave Height<br>(ft/m)</p></th>
+              <th> <p class='has-text-centered'>Water Temperature<br>(°F/°C)</p></th>
             </tr>
-          <% end %>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            <% @local_weather.hourly_breakdown.each do |hour| %>
+              <tr>
+                <td> <%= hour.time %> </td>
+                <td> <%= "#{hour.tempf}/#{hour.tempc}" %> </td>
+                <td> <%= "#{hour.wind_speed_miles}/#{hour.wind_speed_kmph}" %> </td>
+                <td> <%= "#{hour.wave_height_feet}/#{hour.wave_height_meters}" %> </td>
+                <td> <%= "#{hour.water_temp_f}/#{hour.water_temp_c}" %> </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-</div>
+<% else %>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="column is-6 is-offset-3">
+        <div class="card search-card">
+          <div class="card-content has-text-centered">
+            <h5 class='title white-title-shadow has-text-weight-bold'>Sorry bro! No data for that location found!</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

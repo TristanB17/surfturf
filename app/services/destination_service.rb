@@ -17,6 +17,10 @@ class DestinationService
   end
 
   def get_json(url)
-    JSON.parse(conn.get(url).body, symbolize_names: true)[:data][:weather].first
+    begin
+      JSON.parse(conn.get(url).body, symbolize_names: true)[:data][:weather].first
+    rescue => error
+      return nil
+    end
   end
 end
