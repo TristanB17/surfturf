@@ -5,7 +5,7 @@
 
 SurfTurf is a small app used to gather marine weather data on a desired location. The searched location can be as specific or as broad as the user would like. 
 
-This project was built as a solo 'choose your own adventure'-type project where an API is provided, and an app should be constructed around it.
+This project was built as a solo 'choose your own adventure'-type project where an API is provided, with an app then structured around it.
 
 
 ## Getting Started
@@ -14,7 +14,7 @@ These instructions will get a copy of the project up and running on your local m
 
 ### Prerequisites
 
-This repository uses [Google OAuth2](https://support.google.com/googleapi/answer/6158849?hl=en) to create accounts and verify users.  A gmail account is required to login to this app. Part of the Google OAuth2 setup process involves receiving a *CLIENT ID* and a *CLIENT SECRET* from the google developer console, which are stored away in an application.yml file.  There is an additional key required for local setup  process for generating and using this secret key is outlined below in __Installation and Setup__.
+This repository uses [Google OAuth2](https://support.google.com/googleapi/answer/6158849?hl=en) to create accounts and verify users.  A gmail account is required to login to this app. Part of the Google OAuth2 setup process involves receiving a *CLIENT ID* and a *CLIENT SECRET* from the google developer console, which are stored away in an application.yml file. There is an additional key required for the local setup process. Generation and use of these keys is outlined below in __Installation and Setup__.
 
 ### Installation and Setup
 
@@ -43,7 +43,7 @@ Setup the database:
 rails db:{create,migrate}
 ```
 
-Next, use [Figaro](https://github.com/laserlemon/figaro) to generate an `application.yml` file in `/config/`:
+Next, use [Figaro](https://github.com/laserlemon/figaro) to generate an `application.yml` file in the `/config` directory:
 
 ```
 bundle exec figaro install
@@ -93,11 +93,11 @@ Selecting 'new search' will present a user with a series of fields; they can fil
 
 [newsearch](https://i.imgur.com/GTqFb0g.png)
 
-After clicking 'search', a user will then be presented with a series of locations (or one depending on the specificity of the user's search parameters) which all share attributes of the original search. A user is able to select the intended location
+After clicking 'search', a user will then be presented with a series of locations (or one depending on the specificity of the user's search parameters) which all share attributes of the original search. A user is able to select the intended location.
 
 [verifylocation](https://i.imgur.com/31Moi5l.png)
 
-And finally the user is presented with weather information on the current date.
+The user is then presented with weather information on the current date.
 
 [weatherresults](https://i.imgur.com/RGhkNrl.png)
 
@@ -105,7 +105,7 @@ Additional data analysis will be conducted as a part of the expansion of the app
     
 ## Deployment
 
-Talent Buyer API is deployed through [Heroku](https://www.heroku.com/) and hosted at [https://surfturf.herokuapp.com/](https://surfturf.herokuapp.com/).
+SurfTurf is deployed through [Heroku](https://www.heroku.com/) and hosted at [https://surfturf.herokuapp.com/](https://surfturf.herokuapp.com/).
 
 ## Built With
 
