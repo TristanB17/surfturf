@@ -16,27 +16,32 @@ RSpec.describe 'a user' do
       expect(page).to have_field(:country)
       expect(page).to have_button('Search Location')
     end
-    xit 'enters a search and is given options to specify location' do
-      location_1 = '1600, Pennsylvania Avenue, Avon Park, Savannah, Chatham County, Georgia, 31404, USA'
-      location_2 = '1600, Pennsylvania Avenue, Saint Cloud, Osceola County, Florida, 34769, USA'
-      visit searches_path
+    it 'enters a search and is given options to specify location' do
+      VCR.use_cassette('geocoder_pennsylvania_ave') do
+        location_1 = '1600, Pennsylvania Avenue, Avon Park, Savannah, Chatham County, Georgia, 31404, USA'
+        location_2 = '1600, Pennsylvania Avenue, Saint Cloud, Osceola County, Florida, 34769, USA'
+        visit searches_path
 
-      fill_in :address, with: '1600 Pennsylvania Ave'
-      click_on 'Search Location'
+        fill_in :address, with: '1600 Pennsylvania Ave'
+        click_on 'Search Location'
 
-      expect(current_path).to eq(search_path(Search.last.id))
-      expect(page).to have_content('Did you mean...?')
-      expect(page).to have_link(location_1)
-      expect(page).to have_link(location_2)
+        expect(current_path).to eq(search_path(Search.last.id))
+        expect(page).to have_content('Did you mean...?')
+        expect(page).to have_link(location_1)
+        expect(page).to have_link(location_2)
+      end
     end
-    xit 'asks user to enter new location if query is invalid/returns no results' do
-      visit searches_path
+    it 'asks user to enter new location if query is invalid/returns no results' do
+      VCR.use_cassette('lsjdnvlkajsndlviuasbdklhvasbdglihb') do
+        service = Geocoder.search('lsjdnvlkajsndlviuasbdklhvasbdglihb')
+        visit searches_path
 
-      fill_in :address, with: 'lsjdnvlkajsndlviuasbdklhvasbdglihb'
-      click_on 'Search Location'
+        fill_in :address, with: 'lsjdnvlkajsndlviuasbdklhvasbdglihb'
+        click_on 'Search Location'
 
-      expect(current_path).to eq(new_search_path)
-      expect(page).to have_content("Sorry, no locations found with those parameters")
+        expect(current_path).to eq(new_search_path)
+        expect(page).to have_content("Sorry, no locations found with those parameters")
+      end
     end
   end
 end

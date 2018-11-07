@@ -8,8 +8,6 @@ RSpec.describe User, type: :model do
     it {should validate_presence_of(:provider)}
     it {should validate_presence_of(:uid)}
     it {should validate_presence_of(:token)}
-    it {should validate_presence_of(:refresh_token)}
-    it {should validate_presence_of(:oauth_expires_at)}
   end
   context 'model methods' do
     it "creates or updates itself from an oauth hash" do
@@ -24,7 +22,7 @@ RSpec.describe User, type: :model do
       credentials: {
         token: "12345",
         refresh_token: "123456",
-        expires_at: DateTime.now,
+        oauth_expires_at: DateTime.now,
       }
     }
       User.update_or_create(auth)

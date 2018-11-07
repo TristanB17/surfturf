@@ -23,9 +23,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Expires:
-      - Wed, 07 Nov 2018 00:20:50 GMT
+      - Wed, 07 Nov 2018 01:46:16 GMT
       X-Wwo-Qpd-Left:
-      - '499'
+      - '497'
       X-Powered-By:
       - ASP.NET
       Access-Control-Allow-Origin:
@@ -33,7 +33,7 @@ http_interactions:
       Access-Control-Allow-Headers:
       - content-type
       Date:
-      - Wed, 07 Nov 2018 00:18:49 GMT
+      - Wed, 07 Nov 2018 01:44:15 GMT
       Content-Length:
       - '7458'
     body:
@@ -141,5 +141,5 @@ http_interactions:
         rain shower"}],"precipMM":"3.9","humidity":"95","visibility":"8","pressure":"1014","cloudcover":"100","HeatIndexC":"17","HeatIndexF":"63","DewPointC":"16","DewPointF":"62","WindChillC":"17","WindChillF":"63","WindGustMiles":"21","WindGustKmph":"33","FeelsLikeC":"17","FeelsLikeF":"63","sigHeight_m":"1.0","swellHeight_m":"0.7","swellHeight_ft":"2.3","swellDir":"100","swellDir16Point":"E","swellPeriod_secs":"8.8","waterTemp_C":"23","waterTemp_F":"73"},{"time":"2300","tempC":"17","tempF":"62","windspeedMiles":"17","windspeedKmph":"27","winddirDegree":"316","winddir16Point":"NW","weatherCode":"353","weatherIconUrl":[{"value":"http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0025_light_rain_showers_night.png"}],"weatherDesc":[{"value":"Light
         rain shower"}],"precipMM":"5.9","humidity":"94","visibility":"5","pressure":"1014","cloudcover":"100","HeatIndexC":"17","HeatIndexF":"62","DewPointC":"16","DewPointF":"61","WindChillC":"17","WindChillF":"62","WindGustMiles":"19","WindGustKmph":"31","FeelsLikeC":"17","FeelsLikeF":"62","sigHeight_m":"1.0","swellHeight_m":"0.7","swellHeight_ft":"2.3","swellDir":"100","swellDir16Point":"E","swellPeriod_secs":"8.9","waterTemp_C":"23","waterTemp_F":"73"}]}]}}'
     http_version: 
-  recorded_at: Wed, 07 Nov 2018 00:18:50 GMT
+  recorded_at: Wed, 07 Nov 2018 01:44:16 GMT
 recorded_with: VCR 4.0.0

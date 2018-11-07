@@ -4,10 +4,8 @@ class User < ApplicationRecord
                         :email,
                         :first_name,
                         :last_name,
-                        :token,
-                        :refresh_token,
-                        :oauth_expires_at
-
+                        :token
+                        
   def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
     user.attributes = {
