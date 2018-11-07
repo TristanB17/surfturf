@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&format=json&q=1600%20Pennsylvania%20Ave
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 07 Nov 2018 01:44:03 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=0, report-uri="https://openstreetmap.report-uri.com/r/d/ct/reportOnly"
+      Upgrade:
+      - h2
+      Connection:
+      - Upgrade, close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGxhY2VfaWQiOiIyMDk0MjU0MTYiLCJsaWNlbmNlIjoiRGF0YSDCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycywgT0RiTCAxLjAuIGh0dHBzOlwvXC9vc20ub3JnXC9jb3B5cmlnaHQiLCJvc21fdHlwZSI6IndheSIsIm9zbV9pZCI6IjkwODE3MzEiLCJib3VuZGluZ2JveCI6WyIzMi4wNTE0OTQiLCIzMi4wNTE1OTQiLCItODEuMDYzNzUyIiwiLTgxLjA2MzY1MiJdLCJsYXQiOiIzMi4wNTE1NDQiLCJsb24iOiItODEuMDYzNzAyIiwiZGlzcGxheV9uYW1lIjoiMTYwMCwgUGVubnN5bHZhbmlhIEF2ZW51ZSwgQXZvbiBQYXJrLCBTYXZhbm5haCwgQ2hhdGhhbSBDb3VudHksIEdlb3JnaWEsIDMxNDA0LCBVU0EiLCJjbGFzcyI6InBsYWNlIiwidHlwZSI6ImhvdXNlIiwiaW1wb3J0YW5jZSI6MC4zMTEwMDAwMDAwMDAwMDAwNSwiYWRkcmVzcyI6eyJob3VzZV9udW1iZXIiOiIxNjAwIiwicm9hZCI6IlBlbm5zeWx2YW5pYSBBdmVudWUiLCJuZWlnaGJvdXJob29kIjoiQXZvbiBQYXJrIiwiY2l0eSI6IlNhdmFubmFoIiwiY291bnR5IjoiQ2hhdGhhbSBDb3VudHkiLCJzdGF0ZSI6Ikdlb3JnaWEiLCJwb3N0Y29kZSI6IjMxNDA0IiwiY291bnRyeSI6IlVTQSIsImNvdW50cnlfY29kZSI6InVzIn19LHsicGxhY2VfaWQiOiIyMDg3NDEzNzMiLCJsaWNlbmNlIjoiRGF0YSDCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycywgT0RiTCAxLjAuIGh0dHBzOlwvXC9vc20ub3JnXC9jb3B5cmlnaHQiLCJvc21fdHlwZSI6IndheSIsIm9zbV9pZCI6IjExMTc5OTk3IiwiYm91bmRpbmdib3giOlsiMjguMjQzMDAyIiwiMjguMjQzMTAyIiwiLTgxLjI4MjYyIiwiLTgxLjI4MjUyIl0sImxhdCI6IjI4LjI0MzA1MiIsImxvbiI6Ii04MS4yODI1NyIsImRpc3BsYXlfbmFtZSI6IjE2MDAsIFBlbm5zeWx2YW5pYSBBdmVudWUsIFNhaW50IENsb3VkLCBPc2Nlb2xhIENvdW50eSwgRmxvcmlkYSwgMzQ3NjksIFVTQSIsImNsYXNzIjoicGxhY2UiLCJ0eXBlIjoiaG91c2UiLCJpbXBvcnRhbmNlIjowLjMxMTAwMDAwMDAwMDAwMDA1LCJhZGRyZXNzIjp7ImhvdXNlX251bWJlciI6IjE2MDAiLCJyb2FkIjoiUGVubnN5bHZhbmlhIEF2ZW51ZSIsInN1YnVyYiI6IlNhaW50IENsb3VkIiwiY291bnR5IjoiT3NjZW9sYSBDb3VudHkiLCJzdGF0ZSI6IkZsb3JpZGEiLCJwb3N0Y29kZSI6IjM0NzY5IiwiY291bnRyeSI6IlVTQSIsImNvdW50cnlfY29kZSI6InVzIn19XQ==
+    http_version: 
+  recorded_at: Wed, 07 Nov 2018 01:44:04 GMT
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&format=json&q=1600%20Pennsylvania%20Ave
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 07 Nov 2018 01:44:04 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=0, report-uri="https://openstreetmap.report-uri.com/r/d/ct/reportOnly"
+      Upgrade:
+      - h2
+      Connection:
+      - Upgrade, close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGxhY2VfaWQiOiIyMDk0MjU0MTYiLCJsaWNlbmNlIjoiRGF0YSDCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycywgT0RiTCAxLjAuIGh0dHBzOlwvXC9vc20ub3JnXC9jb3B5cmlnaHQiLCJvc21fdHlwZSI6IndheSIsIm9zbV9pZCI6IjkwODE3MzEiLCJib3VuZGluZ2JveCI6WyIzMi4wNTE0OTQiLCIzMi4wNTE1OTQiLCItODEuMDYzNzUyIiwiLTgxLjA2MzY1MiJdLCJsYXQiOiIzMi4wNTE1NDQiLCJsb24iOiItODEuMDYzNzAyIiwiZGlzcGxheV9uYW1lIjoiMTYwMCwgUGVubnN5bHZhbmlhIEF2ZW51ZSwgQXZvbiBQYXJrLCBTYXZhbm5haCwgQ2hhdGhhbSBDb3VudHksIEdlb3JnaWEsIDMxNDA0LCBVU0EiLCJjbGFzcyI6InBsYWNlIiwidHlwZSI6ImhvdXNlIiwiaW1wb3J0YW5jZSI6MC4zMTEwMDAwMDAwMDAwMDAwNSwiYWRkcmVzcyI6eyJob3VzZV9udW1iZXIiOiIxNjAwIiwicm9hZCI6IlBlbm5zeWx2YW5pYSBBdmVudWUiLCJuZWlnaGJvdXJob29kIjoiQXZvbiBQYXJrIiwiY2l0eSI6IlNhdmFubmFoIiwiY291bnR5IjoiQ2hhdGhhbSBDb3VudHkiLCJzdGF0ZSI6Ikdlb3JnaWEiLCJwb3N0Y29kZSI6IjMxNDA0IiwiY291bnRyeSI6IlVTQSIsImNvdW50cnlfY29kZSI6InVzIn19LHsicGxhY2VfaWQiOiIyMDg3NDEzNzMiLCJsaWNlbmNlIjoiRGF0YSDCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycywgT0RiTCAxLjAuIGh0dHBzOlwvXC9vc20ub3JnXC9jb3B5cmlnaHQiLCJvc21fdHlwZSI6IndheSIsIm9zbV9pZCI6IjExMTc5OTk3IiwiYm91bmRpbmdib3giOlsiMjguMjQzMDAyIiwiMjguMjQzMTAyIiwiLTgxLjI4MjYyIiwiLTgxLjI4MjUyIl0sImxhdCI6IjI4LjI0MzA1MiIsImxvbiI6Ii04MS4yODI1NyIsImRpc3BsYXlfbmFtZSI6IjE2MDAsIFBlbm5zeWx2YW5pYSBBdmVudWUsIFNhaW50IENsb3VkLCBPc2Nlb2xhIENvdW50eSwgRmxvcmlkYSwgMzQ3NjksIFVTQSIsImNsYXNzIjoicGxhY2UiLCJ0eXBlIjoiaG91c2UiLCJpbXBvcnRhbmNlIjowLjMxMTAwMDAwMDAwMDAwMDA1LCJhZGRyZXNzIjp7ImhvdXNlX251bWJlciI6IjE2MDAiLCJyb2FkIjoiUGVubnN5bHZhbmlhIEF2ZW51ZSIsInN1YnVyYiI6IlNhaW50IENsb3VkIiwiY291bnR5IjoiT3NjZW9sYSBDb3VudHkiLCJzdGF0ZSI6IkZsb3JpZGEiLCJwb3N0Y29kZSI6IjM0NzY5IiwiY291bnRyeSI6IlVTQSIsImNvdW50cnlfY29kZSI6InVzIn19XQ==
+    http_version: 
+  recorded_at: Wed, 07 Nov 2018 01:44:04 GMT
+recorded_with: VCR 4.0.0
