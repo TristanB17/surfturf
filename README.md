@@ -1,7 +1,6 @@
 # SurfTurf
 
 [![Build Status](https://travis-ci.com/colinwarmstrong/whereto.svg?branch=master)](https://travis-ci.com/TristanB17/surfturf)
-
 [![Coverage Status](https://coveralls.io/repos/github/TristanB17/surfturf/badge.svg?branch=add_coveralls)](https://coveralls.io/github/TristanB17/surfturf?branch=add_coveralls)
 
 SurfTurf is a small app used to gather marine weather data on a desired location. The searched location can be as specific or as broad as the user would like. 
