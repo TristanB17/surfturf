@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Location, type: :model do
   context 'model methods' do
-    it "returns geolocations object into location object" do
+    xit "returns geolocations object into location object" do
       locations = Geocoder.search('1600 Pennsylvania Ave')
 
       location = Location.new(locations.first)
