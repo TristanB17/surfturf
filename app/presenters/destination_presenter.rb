@@ -11,6 +11,11 @@ class DestinationPresenter
   end
 
   def destination_weather(location_name)
-    DestinationDate.new(@service.retrieve_marine_weather, location_name)
+    successful_search = @service.retrieve_marine_weather
+    if successful_search
+      return DestinationDate.new(successful_search, location_name)
+    else
+      return nil
+    end
   end
 end
