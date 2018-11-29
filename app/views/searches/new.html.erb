@@ -1,14 +1,14 @@
 <div class="hero-body">
   <div class="container has-text-centered">
     <div class="column is-6 is-offset-3">
-      <h3 class='title white-title-shadow has-text-weight-bold'> Get new surf locations, duhd </h3>
+      <h3 class='title white-title-shadow has-text-weight-bold'> Get new surf locations</h3>
       <%= form_tag searches_path, method: :post do %>
-        <%= text_field_tag :address, nil, placeholder: 'Address', class: 'input' %><br><br>
+        <%= text_field_tag :address, nil, placeholder: 'Address/Name of Beach', class: 'input' %><br><br>
         <%= text_field_tag :city, nil, placeholder: 'City', class: 'input' %><br><br>
         <%= text_field_tag :state, nil, placeholder: 'State/Province', class: 'input' %><br><br>
         <%= text_field_tag :country, nil, placeholder: 'Zip Code', class: 'input' %><br><br>
         <%= text_field_tag :zip, nil, placeholder: 'Country', class: 'input' %><br><br>
-        <%= submit_tag 'Search Locations for Surfage, brah', :class => 'button is-info is-large' %>
+        <%= submit_tag 'Search Locations for Surfage', :class => 'button is-info is-large' %>
       <% end %>
     </div>
   </div>
